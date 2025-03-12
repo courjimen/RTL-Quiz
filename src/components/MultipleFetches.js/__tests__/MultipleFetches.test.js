@@ -12,16 +12,13 @@ test('starts without any post', () => {
   - Render the component
   - Assert that the post element doesn't exist
   */
-}); 
+ render(<MultipleFetches />)
+ expect(screen.queryByTestId('fetch-post')).toBeNull;
+
+});
 
 test('after clicking on button, displays loading message', () => {
-  /*
-  2️⃣ [Loading State Test] The second test should handle a button click that displays a loading message.
 
-  - Render the component
-  - Emmulate a button click using `fireEvent.click()`
-  - Assert that loading message is displayed
-  */
  render(<MultipleFetches />)
  fireEvent.click(screen.getByRole('button'));
  expect(screen.getByTestId('fetch-loading-post')).toBeInTheDocument();
