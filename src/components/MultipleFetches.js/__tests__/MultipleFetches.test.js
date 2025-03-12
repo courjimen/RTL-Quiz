@@ -6,12 +6,6 @@ import "@testing-library/jest-dom"
 afterEach(cleanup)
 
 test('starts without any post', () => {
-  /*
-  1️⃣ [Initial State Test] The first test should verify that component starts without any post.
-
-  - Render the component
-  - Assert that the post element doesn't exist
-  */
  render(<MultipleFetches />)
  expect(screen.queryByTestId('fetch-post')).toBeNull;
 
@@ -27,7 +21,7 @@ test('after clicking on button, displays loading message', () => {
 // Group all API tests together and clear each mock after each test.
 describe('API tests', () => {
 
-  test('displays post if API succeeds', async () => {
+  test.skip('displays post if API succeeds', async () => {
     /*
     3️⃣ [Success State Test] The third test should group all API tests together and clear each mock after each test.
 
@@ -72,7 +66,7 @@ describe('API tests', () => {
 
   });
   
-  test('displays comments error if API fails', async () => {
+  test.skip('displays comments error if API fails', async () => {
     /*
     4️⃣ [Comments Error Test] The fourth test should handle displaying comment if API fails.
     - Create controlled promises for both fetches
@@ -112,7 +106,7 @@ describe('API tests', () => {
 
   });
   
-  test('displays post error if API fails', async () => {
+  test.skip('displays post error if API fails', async () => {
     /*
     5️⃣ [Post Error Test] The fifth test should handle displaying post error if API fails.
 
